@@ -48,6 +48,10 @@ export class PrismaTaskRepository implements TaskRepository {
   }
 
   async delete(id: number): Promise<void> {
-    throw new Error('Method not implemented.');
+    await this.prismaService.task.delete({
+      where: {
+        id,
+      },
+    });
   }
 }
