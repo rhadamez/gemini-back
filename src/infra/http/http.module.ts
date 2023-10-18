@@ -3,7 +3,12 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { TestResolver } from './test.resolver';
 import { ApolloDriver } from '@nestjs/apollo';
-import { createTaskProvider } from './http.providers';
+import {
+  createTaskProvider,
+  deleteTaskProvider,
+  listTaskProvider,
+  updateTaskProvider,
+} from './http.providers';
 import { DatabaseModule } from '../databases/database.module';
 
 @Module({
@@ -14,6 +19,12 @@ import { DatabaseModule } from '../databases/database.module';
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
     }),
   ],
-  providers: [TestResolver, createTaskProvider],
+  providers: [
+    TestResolver,
+    createTaskProvider,
+    listTaskProvider,
+    updateTaskProvider,
+    deleteTaskProvider,
+  ],
 })
 export class HttpModule {}
