@@ -4,7 +4,7 @@ import { InMemoryTaskRepository } from '../../infra/database/in-memory/in-memory
 let createTask: CreateTask;
 let taskRepository: InMemoryTaskRepository;
 
-describe('Task', () => {
+describe('Create Task', () => {
   beforeEach(() => {
     taskRepository = new InMemoryTaskRepository();
     createTask = new CreateTask(taskRepository);
