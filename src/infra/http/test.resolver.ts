@@ -4,10 +4,10 @@ import { Task } from './graphql/models/task';
 import { CreateTaskInput } from './graphql/inputs/create-task-input';
 import { UpdateTaskInput } from './graphql/inputs/update-task-input';
 import { DeleteTaskInput } from './graphql/inputs/delete-task-input';
-import { CreateTask } from '@/domain/use-cases/create-task';
-import { ListTasks } from '@/domain/use-cases/list-tasks';
-import { UpdateTask } from '@/domain/use-cases/update-task';
-import { DeleteTask } from '@/domain/use-cases/delete-task';
+import { CreateTask } from '@/src/domain/use-cases/create-task';
+import { ListTasks } from '@/src/domain/use-cases/list-tasks';
+import { UpdateTask } from '@/src/domain/use-cases/update-task';
+import { DeleteTask } from '@/src/domain/use-cases/delete-task';
 
 @Resolver()
 export class TestResolver {

@@ -1,8 +1,8 @@
-import { TaskRepository } from '@/domain/contracts/task-repository';
-import { CreateTask } from '@/domain/use-cases/create-task';
-import { DeleteTask } from '@/domain/use-cases/delete-task';
-import { ListTasks } from '@/domain/use-cases/list-tasks';
-import { UpdateTask } from '@/domain/use-cases/update-task';
+import { TaskRepository } from '@/src/domain/contracts/task-repository';
+import { CreateTask } from '@/src/domain/use-cases/create-task';
+import { DeleteTask } from '@/src/domain/use-cases/delete-task';
+import { ListTasks } from '@/src/domain/use-cases/list-tasks';
+import { UpdateTask } from '@/src/domain/use-cases/update-task';
 
 export const createTaskProvider = {
   provide: CreateTask,

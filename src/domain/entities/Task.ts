@@ -21,6 +21,10 @@ export class Task {
     return new Task({ description });
   }
 
+  set id(id: number) {
+    this.props.id = id;
+  }
+
   get id(): number | undefined {
     return this.props.id;
   }

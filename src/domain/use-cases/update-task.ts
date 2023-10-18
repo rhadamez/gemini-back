@@ -1,4 +1,4 @@
-import { Task } from '@/domain/entities/Task';
+import { Task } from '@/src/domain/entities/Task';
 import { TaskRepository } from '../contracts/task-repository';
 import { TaskNotFound } from '../entities/errors/task-not-found';
 

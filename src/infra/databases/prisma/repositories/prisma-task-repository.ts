@@ -1,5 +1,5 @@
-import { TaskRepository } from '@/domain/contracts/task-repository';
-import { Task } from '@/domain/entities/Task';
+import { TaskRepository } from '@/src/domain/contracts/task-repository';
+import { Task } from '@/src/domain/entities/Task';
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../prisma.service';
 import { PrismaTaskMapper } from '../mappers/prisma-task-mapper';

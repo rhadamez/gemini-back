@@ -1,4 +1,4 @@
-import { Task } from '@/domain/entities/Task';
+import { Task } from '@/src/domain/entities/Task';
 import { Task as PrismaTask } from '@prisma/client';
 
 export class PrismaTaskMapper {
