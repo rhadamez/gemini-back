@@ -41,9 +41,12 @@ export class PrismaTaskRepository implements TaskRepository {
       where: {
         id: task.id,
       },
-      data: task,
+      data: {
+        description: task.description,
+        done: task.done,
+        updatedAt: task.updatedAt,
+      },
     });
-
     return PrismaTaskMapper.toDomain(prismaTask);
   }
 

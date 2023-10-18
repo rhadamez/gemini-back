@@ -17,7 +17,7 @@ export class UpdateTask {
     if (!taskExists) throw new TaskNotFound();
 
     if (description) taskExists.description = description;
-    if (done) taskExists.done = done;
+    if (done !== undefined) taskExists.done = done;
 
     const taskCreated = await this.taskRepository.update(taskExists);
 
