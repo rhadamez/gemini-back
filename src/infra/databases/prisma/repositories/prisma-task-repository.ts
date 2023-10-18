@@ -25,7 +25,15 @@ export class PrismaTaskRepository implements TaskRepository {
   }
 
   async findById(id: number): Promise<Task | null> {
-    throw new Error('Method not implemented.');
+    const task = await this.prismaService.task.findUnique({
+      where: {
+        id,
+      },
+    });
+
+    if (!task) return null;
+
+    return PrismaTaskMapper.toDomain(task);
   }
 
   async update(task: Task): Promise<Task> {
