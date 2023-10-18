@@ -19,7 +19,9 @@ export class PrismaTaskRepository implements TaskRepository {
   }
 
   async list(): Promise<Task[]> {
-    throw new Error('Method not implemented.');
+    const tasks = await this.prismaService.task.findMany();
+
+    return tasks.map(PrismaTaskMapper.toDomain);
   }
 
   async findById(id: number): Promise<Task | null> {
