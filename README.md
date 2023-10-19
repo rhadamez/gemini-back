@@ -46,7 +46,7 @@ _Create_
 ```
 mutation {
   create(data: {
-    description: "bah meu nego"
+    description: "First description"
   })
   {
     id
